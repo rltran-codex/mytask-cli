@@ -65,6 +65,12 @@ Usage of add:
         REQUIRED. Define the new task's subject.
 ```
 
+Example
+
+```bash
+> task-cli add -subj "Buy groceries"
+```
+
 ## Update
 
 ```bash
@@ -79,6 +85,14 @@ Usage of update:
         OPTIONAL. Update task's subject.
 ```
 
+Example
+
+```bash
+> task-cli update -id 1 -stat "in-progress"
+> task-cli update -id 1 -stat "done"
+> task-cli update -id 1 -subj "Buy groceries and cook dinner"
+```
+
 ## Delete
 
 ```bash
@@ -89,6 +103,12 @@ Usage of delete:
         REQUIRED. Delete task with id. (default -1)
 ```
 
+Example
+
+```bash
+> task-cli delete -id 1
+```
+
 ## List
 
 ```bash
@@ -97,4 +117,13 @@ Usage of delete:
 Usage of list:
   -stat string
         OPTIONAL. List all tasks with specified status.
+```
+
+Example
+
+```bash
+> task-cli list
+> task-cli list -stat "done"
+> task-cli list -stat "todo"
+> task-cli list -stat "in-progress"
 ```
